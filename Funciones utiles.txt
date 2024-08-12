@@ -1,0 +1,16 @@
+Quita el primer elemento del arreglo y lo agrega al final, y devuelve el arreglo modificado.
+
+function rotarALaIzquierda(arreglo){
+   
+  
+    let primerElemento= arreglo.splice(0,1); //splice devuelve un array con los elementos eliminados
+   
+    arreglo.push(primerElemento[0]);
+    
+    return arreglo;
+}
+
+
+Funcion push()
+// El método `push()` modifica el arreglo original y devuelve la nueva longitud del arreglo, no el arreglo en sí.
+// Por eso no lo igualamos a nada sino que modificamos el arreglo original. 

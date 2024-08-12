@@ -1,0 +1,13 @@
+/* Escribe tu código aquí */
+
+function productoria(num){
+    let producto=1;
+    while(num>0){
+        producto=producto*num;
+        num=num-1;
+    }
+    return producto;
+}
+
+
+/* Fin */

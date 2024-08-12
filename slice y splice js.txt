@@ -1,0 +1,40 @@
+Método slice
+No modifica el array original.
+Devuelve una nueva copia de una porción del array original.
+array.slice(start, end);
+start: El índice donde comienza la extracción. Si es negativo, indica un desplazamiento desde el final del array. El valor predeterminado es 0.
+end: El índice donde termina la extracción (no incluido en el nuevo array). Si es negativo, indica un desplazamiento desde el final del array. El valor predeterminado es array.length.
+
+Ejemplo:
+let array = [1, 2, 3, 4, 5];
+let copy = array.slice(1, 3); // Copia desde el índice 1 hasta el índice 3 (no incluido)
+console.log(copy); // [2, 3]
+console.log(array); // [1, 2, 3, 4, 5]
+
+Otro ejemplo: (Para copiar un arreglo a otro)
+let array = [1, 2, 3, 4, 5];
+let copiedArray = array.slice();
+console.log(copiedArray); // [1, 2, 3, 4, 5]
+console.log(array === copiedArray); // false, ya que son dos arrays diferentes aunque con el mismo contenido
+
+
+Método splice
+Modifica el array original.
+Devuelve un array con los elementos eliminados.
+
+array.splice(start, deleteCount, item1, item2, ...);
+start: El índice en el array desde el cual comenzar a cambiar el array. Si es negativo, indica un desplazamiento desde el final del array.
+deleteCount: Un número entero que indica el número de elementos a eliminar del array. Si es 0, no se eliminan elementos.
+item1, item2, ...: Los elementos que se agregarán al array a partir del índice start. Si no se especifican, splice solo eliminará elementos.
+
+Ejemplo:
+let array = [1, 2, 3, 4, 5];
+let removed = array.splice(2, 1); // Elimina 1 elemento en el índice 2
+console.log(array); // [1, 2, 4, 5]
+console.log(removed); // [3]
+
+Otro ejemplo:
+let array = [1, 2, 3, 4, 5];
+let removed = array.splice(2, 2, 'a', 'b'); // Elimina 2 elementos desde el índice 2 y agrega 'a' y 'b'
+console.log(array); // [1, 2, 'a', 'b', 5]
+console.log(removed); // [3, 4]

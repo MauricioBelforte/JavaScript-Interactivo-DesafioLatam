@@ -1,0 +1,58 @@
+Rotar a la derecha
+Ideas clave
+Podemos borrar elementos de un array utilizando el método splice().
+Podemos determinar la longitud de un arreglo utilizando la propiedad length.
+El último elemento de un arreglo es el elemento en la posición length - 1.
+Podemos agregar un nuevo elemento a un arreglo utilizando el método push().
+Rotar a la derecha un arreglo requiere eliminar el último elemento y agregarlo al principio.
+
+
+Ejercicio
+Para este ejercicio, crea una función llamada rotarALaDerecha que reciba un arreglo y retorne el arreglo rotado a la derecha.
+
+rotarALaDerecha([1,2,3,4]) // 4,1,2,3
+rotarALaDerecha(["Juan", "Pedro", "Ana", "Luis"]) // "Luis", "Juan", "Pedro", "Ana"
+
+
+/* Escribe tu código aquí */
+
+function rotarALaDerecha(arreglo){
+
+
+    let elementoEliminado= arreglo.splice(arreglo.length-1,1); //Elimina el ultimo elemento del arreglo , devuelve el arreglo con el elemento eliminado y modifica el arreglo original
+     arreglo.unshift(elementoEliminado[0]); //Esto devuelve la longitud nueva del arreglo pero modifica el arreglo original
+     return arreglo  //devuelvo el arreglo original
+
+}
+
+/* Fin */
+console.log(rotarALaDerecha([5, 6, 7, 8, 9]));
+console.log(rotarALaDerecha(['a', 'b', 'c', 'd', 'e'])); 
+
+
+
+Lo resolvi usando push asi 
+
+
+/* Escribe tu código aquí */
+
+function rotarALaDerecha(arreglo){
+
+    var i=arreglo.length-1;
+    //console.log(i);
+    while(i>0){
+       let primerElemento = arreglo.splice(0,1);
+       //console.log(primerElemento);
+       arreglo.push(primerElemento[0]);
+       //console.log(arreglo);
+        i=i-1;
+        //console.log(i);
+    }
+    return arreglo;
+    
+
+}
+
+/* Fin */
+console.log(rotarALaDerecha([5, 6, 7, 8, 9]));
+console.log(rotarALaDerecha(['a', 'b', 'c', 'd', 'e'])); 

@@ -1,0 +1,11 @@
+
+
+function sumatoriaPares(num){
+    let sumaPares=0;
+    for(i=0;i<=num;i=i+2){
+        sumaPares=sumaPares+i;
+
+    }
+    return sumaPares;
+}
+
